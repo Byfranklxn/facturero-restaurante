@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -17,21 +16,27 @@
             --lineas: #D4D4CE;
         }
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: #EAEAE5;
             color: var(--texto-oscuro);
-            padding: 20px;
+            padding: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 0;
+            width: 100%;
         }
 
         #factura-container {
             background-color: var(--crema-fondo);
             width: 100%;
             max-width: 800px;
-            padding: 40px 50px;
+            padding: 25px 20px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             border-radius: 4px;
             margin-bottom: 20px;
@@ -166,6 +171,8 @@
 
         .botones-accion {
             display: flex; gap: 15px; margin-bottom: 20px; flex-wrap: wrap; justify-content: center;
+            width: 100%;
+            max-width: 800px;
         }
         button {
             padding: 12px 24px; border: none; border-radius: 3px;
@@ -193,6 +200,31 @@
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
+        }
+
+        /* Responsive para celulares */
+        @media (max-width: 768px) {
+            #factura-container {
+                padding: 15px 10px;
+            }
+            .datos-cliente {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .info-empresa {
+                text-align: center;
+            }
+            .totales {
+                justify-content: center;
+            }
+            .totales-box {
+                width: 100%;
+            }
         }
     </style>
 </head>
